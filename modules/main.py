@@ -227,7 +227,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰────⌈**✨❤️ KUNAL ❤️✨**⌋────╯")
+                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰────⌈**✨❤️ ROWDY ❤️✨**⌋────╯")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -240,6 +240,6 @@ async def account_login(bot: Client, m: Message):
                 continue
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("Done🚦")
+    await m.reply_text("DONE BOSS 😎")
 
 bot.run()
