@@ -21,9 +21,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from bs4 import BeautifulSoup
 
 bot = Client("bot",
-             bot_token= "7018437002:AAG6WuPCt4Hb9VmPG5PmP0kusK3hyaMitJg", 
-             api_id= 27994649,
-             api_hash= "a667f9bf86b1e9af6ee9862fee3001e4")
+             bot_token= "7721672268:AAHFS3KnLtTamqdx-aXVBEG6p-SwNldKzTI", 
+             api_id= 27679306,
+             api_hash= "d0f390f798eec4ddb9246a00a44b7a3f")
 
 
 #----------CONVERTOR-------------
@@ -78,7 +78,7 @@ async def account_login(bot: Client, m: Message):
         await bot.send_document(-1002104716327, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
-        credit = f"KUNAL❤️"
+        credit = f"ROWDY❤️"
 
         path = f"./downloads/{m.chat.id}"
 
@@ -142,7 +142,7 @@ async def account_login(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     if raw_text3 == 'df':
-        CR = "KUNAL❤️"
+        CR = "ROWDY❤️"
     else:
         CR = raw_text3
     await editable.edit("Now send the **Thumb url**\nEg : **`https://telegra.ph/file/df5f23cd48e6043828e0e.jpg`**\n\nor Send `no`")
