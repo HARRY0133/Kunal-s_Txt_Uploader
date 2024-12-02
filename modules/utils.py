@@ -93,7 +93,7 @@ async def progress_bar(current, total, reply, start):
             try:
                 await reply.edit(f"""`
 ╭━━━[PROGRASS BAR]━━━━━━━━➣
-┣⪼⚡ {progress_bar}|﹝{perc}﹞
+┣⪼⚡ {progress_bar}|{perc}
 ┣⪼🚀 SPEED {sp} 
 ┣⪼📟 PROCESSED {cur}
 ┣⪼🧲 SIZE-ETA {tot} -{eta} 
