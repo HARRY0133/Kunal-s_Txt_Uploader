@@ -105,7 +105,7 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝗘𝗡𝗧𝗘𝗥 𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 𝗢𝗥 𝗦𝗘𝗡𝗗 𝗗𝗙 𝗙𝗢𝗥 𝗚𝗥𝗔𝗕𝗕𝗜𝗡𝗚 𝗙𝗥𝗢𝗠 𝗧𝗘𝗫𝗧 𝗙𝗜𝗟𝗘𝗡𝗔𝗠𝗘.**")
+    await editable.edit("**ENTER BATCH NAME OR SEND DF FOR GRABBING  FROM TEXT FILE NAME.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -136,7 +136,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
         res = "UN"
     
-    await editable.edit("**𝗘𝗡𝗧𝗘𝗥 𝗬𝗢𝗨𝗥 𝗡𝗔𝗠𝗘 𝗢𝗥 𝗦𝗘𝗡𝗗 `𝗗𝗙` 𝗙𝗢𝗥 𝗨𝗦𝗘 𝗗𝗘𝗙𝗔𝗨𝗟𝗧**")
+    await editable.edit("**ENTER YOUR NAME OR SEND `DF` FOR USE DEFAULT **")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -144,7 +144,7 @@ async def account_login(bot: Client, m: Message):
         CR = "🌟Rowdy🌟"
     else:
         CR = raw_text3
-    await editable.edit("𝗡𝗢𝗪 𝗦𝗘𝗡𝗗 𝗧𝗛𝗘 **𝗧𝗛𝗨𝗠𝗕 𝗨𝗥𝗟**\nEg : **`https://telegra.ph/file/df5f23cd48e6043828e0e.jpg`**\n\nor Send `no`")
+    await editable.edit("NOW SEND THE **THUMB URL**\nEg : **`https://telegra.ph/file/df5f23cd48e6043828e0e.jpg`**\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -200,8 +200,8 @@ async def account_login(bot: Client, m: Message):
                 else:
                     cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
-                cc = f'**[📹]Video_ID : {str(count).zfill(3)}.**\n\n**𝗩𝗜𝗗𝗘𝗢 𝗡𝗔𝗠𝗘 :** {name1} ({res}) {CR}.mkv\n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 :** {b_name}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 : {CR}**'
-                cc1 = f'**[📁]File_ID : {str(count).zfill(3)}.**\n\n**𝗙𝗜𝗟𝗘 𝗡𝗔𝗠𝗘 :**{name1} {CR}.pdf\n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 :**{b_name}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 : {CR}**'
+                cc = f'**[📹]Video_ID : {str(count).zfill(3)}.**\n\n**VIDEO NAME :** {name1} ({res}) {CR}.mkv\n\n**BATCH NAME :** {b_name}\n\n**DOWNLOADED BY : {CR}**'
+                cc1 = f'**[📁]File_ID : {str(count).zfill(3)}.**\n\n**FILE NAME :**{name1} {CR}.pdf\n\n**BATCH NAME :**{b_name}\n\n**DOWNLOADED BY : {CR}**'
                 
                 if "drive" in url:
                     try:
@@ -227,7 +227,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚📥:-**\n\n** Video Name :-** `{name}\n\n╰──⌈✨ 𝐑𝐎𝐖𝐃𝐘 ✨⌋──╯")
+                    prog = await m.reply_text(f"**DOWNLOADING 📥:-**\n\n** Video Name :-** `{name}\n\n╰──⌈✨ 𝐑𝐎𝐖𝐃𝐘 ✨⌋──╯")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
