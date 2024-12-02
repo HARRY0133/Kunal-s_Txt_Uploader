@@ -105,7 +105,7 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**Enter Batch Name or send df for grabbing from text filename.**")
+    await editable.edit("**ENTER BATCH NAME or send df for grabbing from text filename.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -136,7 +136,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
         res = "UN"
     
-    await editable.edit("**Enter Your Name or send `df` for use default**")
+    await editable.edit("**ENTER YOUR NAME or send `df` for use default**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
