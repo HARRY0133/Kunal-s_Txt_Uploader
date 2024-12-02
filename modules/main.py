@@ -199,7 +199,6 @@ async def account_login(bot: Client, m: Message):
                     cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
                 else:
                     cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
-
                        ╭━━━━━━━━━━━╮
                 cc = f'**[📹]Video_ID : {str(count).zfill(3)}.**\n\n**VIDEO NAME :** {name1} ({res}) {CR}.mkv\n\n**BATCH NAME :** {b_name}\n\n**DOWNLOADED BY : {CR}**'
                        ╰━━━━━━━━━━━╯
