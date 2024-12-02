@@ -58,26 +58,26 @@ async def run_bot(bot: Client, m: Message):
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hello, **ROWDY**! 🌟\n\n I am your friendly bot 🤖, here to help you download links from your **.txt** file and upload them to Telegram. To get started, simply send me the /ROWDY command and follow a few easy steps.")
+    editable = await m.reply_text("Hello, **ROWDY**! 🌟\n\n I am your friendly bot 🤖, here to help you download links from your **.txt** file and upload them to Telegram. To get started, simply send me the /Rowdy command and follow a few easy steps.")
 
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**Stopped**🚦", True)
+    await m.reply_text("**Stopped**🔴", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 #-------------TXT Uploader Commands ---------------
 
-@bot.on_message(filters.command(["ROWDY"]))
+@bot.on_message(filters.command(["Rowdy"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hey Send txt file**")
+    editable = await m.reply_text(f"**📄 Hey Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
-        credit = f"ROWDY❤️"
+        credit = f"🌟ROWDY🌟"
 
         path = f"./downloads/{m.chat.id}"
 
@@ -141,7 +141,7 @@ async def account_login(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     if raw_text3 == 'df':
-        CR = "ROWDY❤️"
+        CR = "🌟Rowdy🌟"
     else:
         CR = raw_text3
     await editable.edit("Now send the **Thumb url**\nEg : **`https://telegra.ph/file/df5f23cd48e6043828e0e.jpg`**\n\nor Send `no`")
@@ -227,7 +227,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰────⌈**✨❤️ ROWDY ❤️✨**⌋────╯")
+                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰──⌈🌟 𝐑𝐎𝐖𝐃𝐘 🌟⌋──╯")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -240,6 +240,6 @@ async def account_login(bot: Client, m: Message):
                 continue
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("DONE BOSS 😎")
+    await m.reply_text("𝗗𝗢𝗡𝗘 𝗕𝗢𝗦𝗦 ")
 
 bot.run()
