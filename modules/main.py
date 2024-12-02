@@ -21,9 +21,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from bs4 import BeautifulSoup
 
 bot = Client("bot",
-             bot_token= "7623289422:AAFVFXApfN0m0dLSn-fhXH0cz-O7ah-uz70", 
-             api_id= 24515547,
-             api_hash= "0809699a061f02fbbcc1a6c4443547ee")
+             bot_token=BOT_TOKEN, 
+             api_id=API_ID,
+             api_hash=API_HASH)
 
 
 #----------CONVERTOR-------------
