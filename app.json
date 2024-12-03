@@ -7,7 +7,7 @@
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/rihankumar/txt_leech",
+    "repository": "https://github.com/HARRY0133/ROWDYKN",
     "success_url": "https://t.me/paidcoursefreemeha",
     "stack": "container",
     "env": {
@@ -24,7 +24,7 @@
             "required": true
         },
         "OWNER_ID": {
-            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶𝒘𝒏𝒆𝒓",
+            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶w𝒏𝒆𝒓",
             "required": true
         },
         "SUDO_USERS": {
